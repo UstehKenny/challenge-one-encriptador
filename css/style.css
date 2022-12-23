@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+body{
+    background: #F3F5FC;
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 40px;
+    padding: 35px 50px;
+}
+.titulo{
+    font-family: 'Cutive Mono', monospace;
+    font-size: 35px;
+}
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.intro-texto{
+    width: 20%;
+}
+#input-texto{
+    background: transparent;
+    border: none;
+    resize: none;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    color: #0A3871;
+}
+#input-texto::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    color: #0A3871;
+    font-size: 32px;
+}
+#input-texto:focus{
+    outline: none;
+}
+.sal-texto{
+    width: 20%;
+    height: 480px;
+    margin-left: 16%;
+    margin-bottom: 5%;
+    background: white;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    padding: 2%;
+}
+.imagen-buscar{
+    width: 100%;
+    height: auto;
+}
+.no-texto{
+    width: 100%;
+    height: 425px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.titulo-buscar{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.subtitulo-buscar{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    text-align: center;
+}
+#resultado{
+    position: absolute;
+    overflow-y: auto;
+    width: 21%;
+    height: 415px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    display: none;
+}
+#copiar{
+    display: none;
+}
+.botones-sal{
+    height: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.botones-input{
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+}
+.botones-sal{
+    width: 300px;
+}
+.boton-azul{
+    width: 250px;
+    height: 60px;
+    background: #0A3871;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: white;
+}
+.boton-gris{
+    width: 250px;
+    height: 60px;
+    background: #D8DFE8;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: #0A3871;
+}
+footer{
+    width: 100%;
+    height: 15%;
+    background: #0A3871;
+    position: absolute;
+    bottom: 0;
+}
