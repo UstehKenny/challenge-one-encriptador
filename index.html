@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/encriptador.js"></script>
     <title>Encriptador de texto</title>
 </head>
 <body>
@@ -15,34 +14,110 @@
         <p class="titulo">Alura - Challenge One | Encriptador de texto</p>
     </header>
     <main>
+
         <div class="intro-texto">
-            <textarea name="input-texto" id="input-texto" cols="40" rows="12" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea name="input-texto" id="input-texto" class="seleccionar" cols="40" rows="12" placeholder="Ingrese el texto aquí"></textarea>
+            <p id="info">	&#9432; Sólo letras minúsculas y sin acentos</p>
             <div class="botones-input">
-                <button class="boton-azul">Encriptar</button>
-                <button class="boton-gris">Desencriptar</button>
+                <button class="boton-azul" id="boton-encriptar">Encriptar</button>
+                <button class="boton-gris" id="boton-desencriptar">Desencriptar</button>
             </div>
         </div>
+
         <div class="sal-texto">
-            <span id="resultado">hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola hola
-            </span>
-            <div class="no-texto">
+            <span id="resultado" class="seleccionar"></span>
+            <div class="no-texto" id="no-texto">
                 <img class="imagen-buscar" src="img/buscar.png" alt="Imagen buscando texto">
                 <span class="titulo-buscar">Ningún mensaje fue encontrado</span>
                 <span class="subtitulo-buscar">Ingresa el texto que desees encriptar o desencriptar.</span>
-                
             </div>
             <div class="botones-sal">
                 <button class="boton-azul" id="copiar">Copiar</button>
             </div>
         </div>
+
     </main>
-    <!-- <footer>footer
-        <br>
-        <br>
-        hola
-    </footer> -->
+    <footer>
+        <!-- <a target="_blank" href="https://icons8.com/icon/8808/linkedin">LinkedIn</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+        <p class="contacto">Contacto: </p>
+        <div class="redes">
+            <p class="github">
+                <a href="https://github.com/UstehKenny">GitHub</a>
+                <img src="img/github.png" alt="Ícono de GitHub">
+            </p>
+            <p class="linkedin">
+                <a href="https://www.linkedin.com/in/carolina-kennedyv/">LinkedIn</a>
+                <img src="img/linkedin.png" alt="Ícono de LinkedIn">
+            </p>
+            
+        </div>
+    </footer>
 </body>
 <script>
-    
+function verificarTexto(){
+    if (texto.value.match('[A-Z]') != null || texto.value.match('[áéíóú]')){
+        alert("⚠ Sólo se aceptan letras minúsculas y sin acentos ⚠")
+    }
+}
+
+function encriptar(){
+    verificarTexto();
+    var nuevoTexto = '';
+    for (var i = 0; i < texto.value.length; i++) {
+        if (texto.value[i] == 'e'){
+            nuevoTexto = nuevoTexto + 'enter';
+        } else if (texto.value[i] == 'i'){
+            nuevoTexto = nuevoTexto + 'imes';
+        } else if (texto.value[i] == 'a'){
+            nuevoTexto = nuevoTexto + 'ai';
+        } else if (texto.value[i] == 'o'){
+            nuevoTexto = nuevoTexto + 'ober';
+        } else if (texto.value[i] == 'u'){
+            nuevoTexto = nuevoTexto + 'ufat';
+        } else {
+            nuevoTexto = nuevoTexto + texto.value[i];
+        }
+    }
+    desplegarResultado(nuevoTexto)
+}
+
+function desencriptar(){
+    verificarTexto();
+    nuevoTexto = texto.value;
+    var eiaou = ['enter','imes','ai','ober','ufat'];
+    if (nuevoTexto.includes(eiaou[0]) || 
+        nuevoTexto.includes(eiaou[1]) || 
+        nuevoTexto.includes(eiaou[2]) || 
+        nuevoTexto.includes(eiaou[3]) || 
+        nuevoTexto.includes(eiaou[4])){
+        nuevoTexto = nuevoTexto.replaceAll(eiaou[0],'e');
+        nuevoTexto = nuevoTexto.replaceAll(eiaou[1],'i');
+        nuevoTexto = nuevoTexto.replaceAll(eiaou[2],'a');
+        nuevoTexto = nuevoTexto.replaceAll(eiaou[3],'o');
+        nuevoTexto = nuevoTexto.replaceAll(eiaou[4],'u');
+    }
+    desplegarResultado(nuevoTexto);
+}
+
+function desplegarResultado(nuevoTexto){
+    let spanResultado = document.getElementById("resultado");
+    document.getElementById("no-texto").style.display = 'none';
+    spanResultado.innerHTML = nuevoTexto;
+    resultado.style.display = 'inline';
+    document.getElementById("copiar").style.display = 'inline';
+}
+
+function copiarTexto(){
+    document.execCommand("copy");
+}
+
+var texto = document.querySelector("textarea");
+var buttonEnc = document.getElementById("boton-encriptar");
+var buttonDes = document.getElementById("boton-desencriptar");
+var buttonCopiar = document.getElementById("copiar");
+buttonEnc.onclick = encriptar;
+buttonDes.onclick = desencriptar;
+buttonCopiar.onclick = copiarTexto;
+
 </script>
 </html>

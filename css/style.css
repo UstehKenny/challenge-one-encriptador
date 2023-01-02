@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
 body{
     background: #F3F5FC;
+    overflow-y: hidden;
 }
 header{
     width: 100%;
@@ -25,7 +26,8 @@ main{
     justify-content: space-around;
 }
 .intro-texto{
-    width: 20%;
+    width: 50%;
+    height: 70vh;
 }
 #input-texto{
     background: transparent;
@@ -35,6 +37,7 @@ main{
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     color: #0A3871;
+    height: 80%;
 }
 #input-texto::placeholder{
     font-family: 'Inter', sans-serif;
@@ -47,9 +50,8 @@ main{
 }
 .sal-texto{
     width: 20%;
-    height: 480px;
-    margin-left: 16%;
-    margin-bottom: 5%;
+    height: 60vh;
+    margin-left: 5%;
     background: white;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -61,7 +63,7 @@ main{
 }
 .no-texto{
     width: 100%;
-    height: 425px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -80,6 +82,12 @@ main{
     font-size: 16px;
     text-align: center;
 }
+#info{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    margin: 10px;
+}
 #resultado{
     position: absolute;
     overflow-y: auto;
@@ -90,11 +98,17 @@ main{
     font-weight: 200;
     display: none;
 }
+.seleccionar{
+    user-select: all;
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+}
 #copiar{
     display: none;
 }
 .botones-sal{
-    height: 500px;
+    height: 100%;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -103,10 +117,10 @@ main{
 .botones-input{
     display: flex;
     justify-content: space-around;
-    width: 700px;
+    width: 100%px;
 }
 .botones-sal{
-    width: 300px;
+    width: 100%;
 }
 .boton-azul{
     width: 250px;
@@ -119,6 +133,7 @@ main{
     font-size: 16px;
     color: white;
 }
+
 .boton-gris{
     width: 250px;
     height: 60px;
@@ -132,8 +147,28 @@ main{
 }
 footer{
     width: 100%;
-    height: 15%;
-    background: #0A3871;
+    height: 13%;
+    background: url(../img/footer.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 101% 101%;
+    filter: drop-shadow(0 0 0.75rem black);
     position: absolute;
     bottom: 0;
+}
+
+.redes {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+}
+
+.redes a{
+    text-decoration: none;
+    color: #F3F5FC;
+}
+
+.redes img{
+    width: 25px;
 }
