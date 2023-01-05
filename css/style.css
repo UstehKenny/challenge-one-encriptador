@@ -147,28 +147,54 @@ main{
 }
 footer{
     width: 100%;
-    height: 13%;
-    background: url(../img/footer.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 101% 101%;
-    filter: drop-shadow(0 0 0.75rem black);
+    height: 10%;
+    padding-top: 2%;
+    background: #0A3871;
     position: absolute;
     bottom: 0;
+    color: #F3F5FC;
 }
-
+.contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
 .redes {
+    padding-top: 1%;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .redes a{
     text-decoration: none;
     color: #F3F5FC;
+    font-size: 18px;
 }
 
 .redes img{
     width: 25px;
 }
+
+.github, .linkedin{
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    align-items: center;
+    transition: filter 1s;
+}
+.github:hover, .linkedin:hover{
+    filter: drop-shadow(0 0 0.3rem rgb(255, 93, 252));
+    text-decoration: underline wavy white;
+}
+.github img, .linkedin img{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
