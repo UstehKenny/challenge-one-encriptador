@@ -33,9 +33,11 @@
                 <span class="titulo-buscar">Ningún mensaje fue encontrado</span>
                 <span class="subtitulo-buscar">Ingresa el texto que desees encriptar o desencriptar.</span>
             </div>
-            <div class="botones-sal">
-                <button class="boton-azul tooltip copiar-boton" id="copiar">Copiar</button>
-                <span class="tooltiptext">Selecciona el texto y luego en <b>Copiar</b></span>
+            <div class="botones-sal ">
+                <button onmouseout="outFunc()" class="boton-azul tooltip copiar-boton" id="copiar">Copiar
+                    <span class="tooltiptext" id="myTooltip">Copiar</span>
+                </button>
+                
             </div>
         </div>
 
@@ -57,6 +59,10 @@
     </footer>
 </body>
 <script>
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copiar";
+}
 function verificarTexto(){
     if (texto.value.match('[A-Z]') != null || texto.value.match('[áéíóú]')){
         alert("⚠ Sólo se aceptan letras minúsculas y sin acentos ⚠")
@@ -122,7 +128,8 @@ function copiarTexto(){
     el.select();
     document.execCommand("copy");
     document.body.removeChild(el);
-    alert("Texto copiado");
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copiado ✔︎";
 }
 
 var texto = document.querySelector("textarea");
