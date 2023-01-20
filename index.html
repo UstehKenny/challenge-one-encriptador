@@ -65,7 +65,8 @@ function outFunc() {
 }
 function verificarTexto(){
     if (texto.value.match('[A-Z]') != null || texto.value.match('[áéíóú]')){
-        alert("⚠ Sólo se aceptan letras minúsculas y sin acentos ⚠")
+        alert("⚠ Sólo se aceptan letras minúsculas y sin acentos ⚠");
+        window.location.reload();
     }
     if (texto.value == null || texto.value == '' || texto.value == ' '){
         alert("⚠ Ingrese texto ⚠");
