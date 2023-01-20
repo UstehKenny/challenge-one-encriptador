@@ -99,12 +99,7 @@ main{
     display: none;
     word-break: break-word;
 }
-.seleccionar{
-    user-select: all;
-    -moz-user-select: all;
-    -webkit-user-select: all;
-    -ms-user-select: all;
-}
+
 #copiar{
     display: none;
 }
