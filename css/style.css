@@ -1,22 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+
 body{
     background: #F3F5FC;
     overflow-y: hidden;
 }
+
 header{
     width: 100%;
     display: flex;
     align-items: center;
 }
+
 .logo {
     width: 40px;
     padding: 35px 50px;
 }
+
 .titulo{
     font-family: 'Cutive Mono', monospace;
     font-size: 35px;
 }
+
 main{
     width: 100%;
     height: auto;
@@ -25,10 +30,12 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .intro-texto{
     width: 50%;
     height: 60vh;
 }
+
 #input-texto{
     background: transparent;
     border: none;
@@ -39,15 +46,18 @@ main{
     color: #0A3871;
     height: 80%;
 }
+
 #input-texto::placeholder{
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     color: #0A3871;
     font-size: 32px;
 }
+
 #input-texto:focus{
     outline: none;
 }
+
 .sal-texto{
     width: 20%;
     height: 55vh;
@@ -57,10 +67,12 @@ main{
     border-radius: 32px;
     padding: 2%;
 }
+
 .imagen-buscar{
     width: 100%;
     height: auto;
 }
+
 .no-texto{
     width: 100%;
     height: auto;
@@ -68,6 +80,7 @@ main{
     flex-direction: column;
     justify-content: flex-end;
 }
+
 .titulo-buscar{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -76,18 +89,21 @@ main{
     margin-bottom: 20px;
     margin-top: 40px;
 }
+
 .subtitulo-buscar{
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 16px;
     text-align: center;
 }
+
 #info{
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 10px;
     margin: 10px;
 }
+
 #resultado{
     position: absolute;
     overflow-y: auto;
@@ -103,6 +119,7 @@ main{
 #copiar{
     display: none;
 }
+
 .botones-sal{
     height: 100%;
     display: flex;
@@ -115,9 +132,11 @@ main{
     justify-content: space-around;
     width: 100%px;
 }
+
 .botones-sal{
     width: 100%;
 }
+
 .boton-azul{
     width: 250px;
     height: 60px;
@@ -130,14 +149,17 @@ main{
     color: white;
     transition: background 0.5s;
 }
+
 .copiar-boton{
     width: 90%;
 }
+
 .boton-azul:active{
     background: #D8DFE8;
     border: 1px solid #0A3871;
     color: #0A3871;
 }
+
 .boton-gris{
     width: 250px;
     height: 60px;
@@ -150,18 +172,23 @@ main{
     color: #0A3871;
     transition: background 0.5s;
 }
+
 .boton-gris:active{
     background: #0A3871;
     border: 1px solid #0A3871;
     color: white;
 }
 
+.boton-azul:hover, .boton-gris:hover{
+    filter: drop-shadow(0 0 0.3rem #13005A);
+}
+
 .tooltip {
     position: relative;
     display: inline-block;
-  }
+}
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
     background-color: #555;
@@ -176,9 +203,9 @@ main{
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
-  }
+}
   
-  .tooltip .tooltiptext::after {
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -187,12 +214,12 @@ main{
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
+}
   
-  .tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
+}
 
 footer{
     width: 100%;
@@ -203,18 +230,20 @@ footer{
     bottom: -10px;
     color: #F3F5FC;
 }
+
 .contacto{
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 20px;
 }
+
 .redes {
     padding-top: 1%;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -238,10 +267,12 @@ footer{
     align-items: center;
     transition: filter 1s;
 }
+
 .github:hover, .linkedin:hover{
-    filter: drop-shadow(0 0 0.3rem rgb(9, 184, 0));
+    filter: drop-shadow(0 0 0.5rem #03C988);
     text-decoration: underline wavy white;
 }
+
 .github img, .linkedin img{
     padding-left: 15%;
     padding-right: 15%;
@@ -254,6 +285,7 @@ footer{
         overflow-x: hidden;
         overflow-y:auto;
     }
+
     main{
         width: 90%;
         flex-direction: column;
@@ -262,79 +294,96 @@ footer{
         padding-left: 5%;
         padding-right: 5%;
     }
+
     .intro-texto{
         width: 80%;
         height: auto;
         padding-bottom: 20px;
     }
+
     .botones-input{
         width: auto;
         align-content: center;
     }
+
     .sal-texto{
         width: 80%;
         height: 30vh;
         padding: 5%;
         margin-bottom: 200px;
     }
+
     .boton-azul{
         margin-bottom: 20px;
     }
+
     .boton-azul, .boton-gris{
         width: 100%;
     }
+
     #input-texto{
         width: 100%;
     }
+
     #resultado{
         width: 74%;
         height: 21%;
         overflow-y: auto;
     }
+
     .imagen-buscar{
         display: none;
     }
+
     .botones-input{
         width: 100%;
         justify-content: center;
         align-content: space-between;
     }
+
     .boton-azul,.boton-gris{
         margin-left: 2%;
         margin-right: 2%;
     }
 }
+
 @media screen and (max-width:540px){
-    
     html{
         overflow-x:hidden;
         width: 100vw;
         height: auto;
     }
+
     header{
         text-align: center;
         flex-direction: column;
         margin-bottom: 20px;
     }
+
     .titulo{
         font-size: 25px;
         padding-left: 2%;
         padding-right: 2%;
     }
+
     body{
         overflow-x:hidden;
     }
+
     footer{
         width: 100vw;
     }
+
     .sal-texto{
         height: 50vh;
         margin-bottom: 150px;
     }
+
     #resultado {
         height: 36%;
         overflow-y: auto;
     }
+
     .botones-input{
         flex-direction: column;
         width: 100%;
@@ -342,19 +391,24 @@ footer{
         align-content: space-between;
     }
 }
+
 @media screen and (max-height:480px){
     html{
         overflow-y: auto;
     }
+
     main{
         padding-bottom: 150px;
     }
+
     .intro-texto{
         height: auto;
     }
+
     .sal-texto{
         height: 100vh;
     }
+
     footer{
         height: 11%;
         bottom: 0;
