@@ -239,7 +239,7 @@ footer{
     transition: filter 1s;
 }
 .github:hover, .linkedin:hover{
-    filter: drop-shadow(0 0 0.3rem rgb(255, 93, 252));
+    filter: drop-shadow(0 0 0.3rem rgb(9, 184, 0));
     text-decoration: underline wavy white;
 }
 .github img, .linkedin img{
@@ -340,5 +340,25 @@ footer{
         width: 100%;
         justify-content: center;
         align-content: space-between;
+    }
+}
+@media screen and (max-height:480px){
+    html{
+        overflow-y: auto;
+    }
+    main{
+        padding-bottom: 150px;
+    }
+    .intro-texto{
+        height: auto;
+    }
+    .sal-texto{
+        height: 100vh;
+    }
+    footer{
+        height: 11%;
+        bottom: 0;
+        font-size: 15px;
+        padding-bottom: 2%;
     }
 }
