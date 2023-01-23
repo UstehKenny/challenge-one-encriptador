@@ -1,10 +1,10 @@
 # ALURA Challenge One | Encriptador
-<center>
+
  Realizado con <br>
  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-</center>
+
 
 ## Requisitos
 
@@ -15,7 +15,8 @@
 ## Funcionamiento
 <p align="center"> <a href="https://ustehkenny.github.io/challenge-one-encriptador/"><img src="img/ej0.png" width="100%"></a><br>
 </p>
-[Live Demo](https://ustehkenny.github.io/challenge-one-encriptador/)
+<!-- [Live-Demo](https://ustehkenny.github.io/challenge-one-encriptador/) -->
+You may be using [Markdown Live Preview](https://markdownlivepreview.com/)
 
 Dado un texto, se intercambiarán las siguientes letras al encriptar:
 
