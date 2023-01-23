@@ -13,10 +13,9 @@
 > - Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original. 
 
 ## Funcionamiento
-<p align="center"> <a href="https://ustehkenny.github.io/challenge-one-encriptador/"><img src="img/ej0.png" width="100%"></a><br>
-</p>
-<!-- [Live-Demo](https://ustehkenny.github.io/challenge-one-encriptador/) -->
-You may be using [Markdown Live Preview](https://markdownlivepreview.com/)
+<p align="center"> <a href="https://ustehkenny.github.io/challenge-one-encriptador/"><img src="img/ej0.png" width="100%"></a><br></p>
+
+[Live Demo](https://ustehkenny.github.io/challenge-one-encriptador/)
 
 Dado un texto, se intercambiarán las siguientes letras al encriptar:
 
