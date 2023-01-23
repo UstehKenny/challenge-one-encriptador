@@ -1,10 +1,10 @@
 # ALURA Challenge One | Encriptador
-<p align="center">
+<center>
  Realizado con <br>
  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-</p>
+</center>
 
 ## Requisitos
 
@@ -14,16 +14,16 @@
 
 ## Funcionamiento
 <p align="center"> <a href="https://ustehkenny.github.io/challenge-one-encriptador/"><img src="img/ej0.png" width="100%"></a><br>
-[Live Demo](https://ustehkenny.github.io/challenge-one-encriptador/)
 </p>
+[Live Demo](https://ustehkenny.github.io/challenge-one-encriptador/)
 
 Dado un texto, se intercambiarán las siguientes letras al encriptar:
 
-`La letra *"e"* es convertida para *"enter"*` <br>
-`La letra *"i"* es convertida para *"imes"*` <br>
-`La letra *"a"* es convertida para *"ai"*` <br>
-`La letra *"o"* es convertida para *"ober"*` <br>
-`La letra *"u"* es convertida para *"ufat"*` <br>
+`La letra "e" es convertida para "enter"` <br>
+`La letra "i" es convertida para "imes"` <br>
+`La letra "a" es convertida para "ai"` <br>
+`La letra "o" es convertida para "ober"` <br>
+`La letra "u" es convertida para "ufat"` <br>
 
 Y viceversa para desencriptar.
 
